@@ -1,1 +1,61 @@
+body {
+   font-family: 'Fira Code Retina';
+   display: flex;
+   justify-content: center;
+}
+.container {
+   background-color: lightgrey;
+   border: .3em double darkslategray;
+   border-radius: .5em;
+   padding: 2em;
+}
+.cadastro {
+   text-align: center;
+}
 
+#inputName {
+   font: 1em 'Fira Code Retina';
+   font-weight: lighter;
+   padding: .5em;
+   border-radius: .5em;
+}
+
+.lista {
+   border-top: 4px double black;
+   margin-top: 3em;
+}
+
+ul {
+   display: inline-block;   
+}
+
+ul, li {
+   list-style-type: none;
+   margin-top: .1em;
+}
+li {
+   padding: .1em .3em;
+}
+
+li:hover {
+   border: 1px dashed lightyellow;
+   border-radius: 1em;
+}
+
+.clickable {
+   cursor: pointer;
+}
+
+.deleteButton {
+   color: white;
+   background-color: darkred;
+   margin-right: 10px;
+   padding: .4em;
+   border-color: lightsteelblue;
+   border-radius: 50%;
+}
+
+.deleteButton:hover {
+   background-color: rgb(201, 0, 0);
+   border-color: grey;
+}
