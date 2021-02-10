@@ -1,0 +1,17 @@
+Desafio Guiado com JS Moderno (ES6)
+===================================
+Check ✔
+-----------***
+01- (✔) Criar variáveis de estado da aplicação;
+02- (✔) Criar eventListener de load com função start;
+03- (✔) Implementar start() com mapeamento de elementos do DOM e invocação à função fetchCountries;
+04- (✔) Implementar fetchCountries() com async/await com busca em 'https://restcountries.eu/rest/v2/all' e transformação para obtenção de id, name, population e flag. Ao final, invocar render();
+05- (✔) Implementar render(), com invocação a funções menores: renderCountryList, renderFavorites, renderSummary e handleCountryButtons;
+06- (✔) Implementar renderCountryList() com templete literals;
+07- (✔) Implementar renderFavorites() com templete literals;
+08- (✔) Implementar renderSummary() com reduce;
+09- (✔) Implementar handleCountryButtons com querySellectorAll e forEach, adicionando listener nos botões passando button.id;
+10- (✔) Implementar addToFavorites(id);
+11- (✔) Implementar removeFromFavorites(id);
+12- (✔) Implementar formatação de valores numéricos;
+***-----------

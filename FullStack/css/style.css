@@ -1,0 +1,32 @@
+body {
+   padding: 10px;
+}
+h2 {
+   text-align: center;
+}
+img {
+   width: 60px;
+   height: 60px;
+   margin-right: 10px;
+   margin-left: 10px;
+
+   border-radius: 50%;
+}
+li {
+   font-size: 1.2em;
+}
+.country-container {
+   display: flex;
+}
+.country {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 5px;
+}
+.country-list {
+   padding: 5px;
+   border: 1px solid gray;
+   border-radius: 10px;
+   margin-right: 10px;
+}
