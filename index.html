@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Interativo: Presença Digital Eucalipto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tab-button.active {
+            border-color: #047857;
+            /* emerald-600 */
+            background-color: #047857;
+            /* emerald-600 */
+            color: white;
+        }
+
+        .tab-button {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .checklist-item::before {
+            content: '☐';
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+            color: #059669;
+            /* emerald-600 */
+        }
+
+        .checklist-item-sub {
+            font-size: .9rem;
+        }
+
+        .checklist-item-sub::before {
+            content: '•';
+            margin-left: 1.5rem;
+            margin-right: 0.5rem;
+            color: #10b981;
+            /* emerald-500 */
+        }
+
+        .highlight-note {
+            background-color: #ecfdf5;
+            /* emerald-50 */
+            border-left: 4px solid #10b981;
+            /* emerald-500 */
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.25rem;
+        }
+
+        .section-intro-text {
+            font-size: 1.1rem;
+            color: #374151;
+            /* gray-700 */
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-stone-100 text-stone-800">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-green-800">Checklist Interativo: Presença Digital</h1>
+            <p class="text-md text-stone-600 mt-2">Guia para implementação da presença digital de empresas de compra de
+                florestas de eucalipto em pequenas cidades do interior.</p>
+        </header>
+
+        <div class="bg-white p-6 rounded-lg shadow-xl">
+            <nav class="mb-6 flex flex-wrap justify-center gap-2 sm:gap-3">
+                <button data-tab="fase1"
+                    class="tab-button active text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-md border-2 border-transparent hover:bg-emerald-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">Fase
+                    1: Fundamentos</button>
+                <button data-tab="fase2"
+                    class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-md border-2 border-transparent hover:bg-emerald-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">Fase
+                    2: Vitrine Digital</button>
+                <button data-tab="fase3"
+                    class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-md border-2 border-transparent hover:bg-emerald-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">Fase
+                    3: Conteúdo</button>
+                <button data-tab="fase4"
+                    class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-md border-2 border-transparent hover:bg-emerald-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">Fase
+                    4: Divulgação</button>
+                <button data-tab="fase5"
+                    class="tab-button text-sm sm:text-base font-medium py-2 px-3 sm:px-4 rounded-md border-2 border-transparent hover:bg-emerald-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">Fase
+                    5: Manutenção</button>
+            </nav>
+
+            <div id="fase1" class="content-section active">
+                <h2 class="text-2xl font-semibold text-green-700 mb-4">Fase 1: Fundamentos (A Base de Tudo)</h2>
+                <p class="section-intro-text">Esta fase aborda os passos iniciais e cruciais para definir a estratégia
+                    base da sua presença digital. Compreender o seu público e a sua mensagem é o primeiro passo para o
+                    sucesso.</p>
+                <ul class="space-y-3">
+                    <li class="checklist-item"><strong>Definir o Público-Alvo Específico:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Quem é o proprietário da floresta na sua região? (Ex:
+                                Agricultor, pecuarista, investidor particular, herdeiro).</li>
+                            <li class="checklist-item-sub">Qual a faixa etária predominante?</li>
+                            <li class="checklist-item-sub">Quais meios de comunicação ele mais utiliza? (Ex: WhatsApp,
+                                Facebook, rádio local, jornais regionais, contacto pessoal).</li>
+                            <li class="checklist-item-sub">O que ele mais valoriza numa negociação? (Ex: Pagamento justo
+                                e rápido, transparência, uma empresa local que compreenda a sua realidade, mínimo de
+                                burocracia, respeito pela sua terra).</li>
+                            <li class="checklist-item-sub">Quais são as suas principais dúvidas ou receios?</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Definir a Mensagem Principal e Diferenciais:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Crie uma frase curta e clara que resuma o seu negócio e o seu
+                                valor. Ex: "Compramos a sua floresta de eucalipto na região de [Nome da Região].
+                                Avaliação justa, pagamento rápido e processo transparente."</li>
+                            <li class="checklist-item-sub">Liste 3 a 5 diferenciais claros e relevantes para o seu
+                                público:
+                                <ul class="ml-6 mt-1 space-y-1">
+                                    <li>Ex: "Somos uma empresa da região, conhecemos a realidade local."</li>
+                                    <li>Ex: "Pagamento rápido e garantido após acordo."</li>
+                                    <li>Ex: "Equipa própria para o corte e transporte, sem intermediários."</li>
+                                    <li>Ex: "Apoio na documentação necessária."</li>
+                                    <li>Ex: "Avaliação gratuita e sem compromisso da sua floresta."</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Organizar Informações de Contacto Essenciais:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Defina um número de telemóvel principal, <strong
+                                    class="text-emerald-600">obrigatoriamente com WhatsApp Business
+                                    configurado</strong>.</li>
+                            <li class="checklist-item-sub">Crie um endereço de e-mail profissional (ex:
+                                `contacto@nomeempresa.pt`).</li>
+                            <li class="checklist-item-sub">Tenha um endereço físico do escritório (mesmo que simples)
+                                para transmitir credibilidade e permitir visitas.</li>
+                            <li class="checklist-item-sub">Defina um horário de atendimento claro.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="fase2" class="content-section">
+                <h2 class="text-2xl font-semibold text-green-700 mb-4">Fase 2: Construindo a Vitrine Digital (Onde Ser
+                    Encontrado)</h2>
+                <p class="section-intro-text">Nesta fase, focamos em estabelecer os canais online onde a sua empresa
+                    será visível e acessível aos potenciais clientes. É a construção da sua "loja" no mundo digital.</p>
+                <ul class="space-y-3">
+                    <li class="checklist-item"><strong>Google Meu Negócio (<span
+                                class="font-bold text-red-600">FERRAMENTA CRUCIAL</span>):</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Crie ou reivindique o perfil da sua empresa no Google Maps.
+                            </li>
+                            <li class="checklist-item-sub">Preencha TODOS os campos: nome, morada, telemóvel, horário,
+                                website.</li>
+                            <li class="checklist-item-sub">Escolha a categoria correta (ex: "Serviços Florestais").</li>
+                            <li class="checklist-item-sub">Adicione fotografias de qualidade.</li>
+                            <li class="checklist-item-sub">Incentive avaliações e responda a todas.</li>
+                            <li class="checklist-item-sub">Utilize a secção "Publicações".</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Website Simples, Direto e Otimizado para Telemóvel:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Páginas essenciais: Início, Quem Somos, Serviços/Como
+                                Funciona, Contacto.</li>
+                            <li class="checklist-item-sub">Garanta que o site é totalmente responsivo.</li>
+                            <li class="checklist-item-sub">Otimize a velocidade de carregamento.</li>
+                            <li class="checklist-item-sub">Considere um domínio próprio (ex: `www.nomeempresa.pt`).</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>WhatsApp Business Configurado Profissionalmente:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Utilize a versão Business.</li>
+                            <li class="checklist-item-sub">Configure o perfil comercial completo.</li>
+                            <li class="checklist-item-sub">Crie mensagem de saudação e respostas rápidas.</li>
+                            <li class="checklist-item-sub">Considere usar o "Catálogo".</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Redes Sociais (Foco no Relevante para o Interior):</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub"><strong>Facebook (<span
+                                        class="font-semibold text-emerald-600">Potencialmente
+                                        Essencial</span>):</strong> Crie uma Página de Empresa.</li>
+                            <li class="checklist-item-sub"><strong>Instagram (Opcional/Secundário):</strong> Foque em
+                                conteúdo visual de qualidade.</li>
+                            <li class="checklist-item-sub"><strong>LinkedIn (Geralmente Desnecessário).</strong></li>
+                            <li class="checklist-item-sub">Verifique grupos online ou fóruns locais.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="fase3" class="content-section">
+                <h2 class="text-2xl font-semibold text-green-700 mb-4">Fase 3: Criação e Partilha de Conteúdo
+                    (Construindo Confiança e Autoridade)</h2>
+                <p class="section-intro-text">O conteúdo que partilha é fundamental para construir confiança e
+                    demonstrar a sua especialização. Nesta fase, planeamos o que dizer e como dizer para atrair e educar
+                    o seu público.</p>
+                <ul class="space-y-3">
+                    <li class="checklist-item"><strong>Planear Conteúdo Relevante e Genuíno:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub"><strong>Prova Social (<span
+                                        class="font-semibold text-emerald-600">Muito Poderoso</span>):</strong>
+                                Testemunhos, fotos de antes/depois (com autorização).</li>
+                            <li class="checklist-item-sub"><strong>Conteúdo Educacional e Informativo:</strong> Responda
+                                a dúvidas comuns, dê dicas sobre gestão, informe sobre legislação.</li>
+                            <li class="checklist-item-sub"><strong>Bastidores e Humanização:</strong> Mostre a equipa,
+                                equipamentos, dia a dia (com moderação).</li>
+                            <li class="checklist-item-sub"><strong>Conteúdo Visual:</strong> Priorize fotografias e
+                                vídeos curtos.</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Definir uma Frequência de Publicação Realista:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Qualidade e consistência são mais importantes que quantidade.
+                            </li>
+                            <li class="checklist-item-sub">Comece com 1-3 publicações/semana no canal principal.</li>
+                            <li class="checklist-item-sub">Mantenha o Google Meu Negócio atualizado.</li>
+                        </ul>
+                        <div class="highlight-note">
+                            <p class="font-semibold">Lembre-se:</p>
+                            <p>O conteúdo deve ser adaptado à linguagem local e aos interesses dos proprietários da sua
+                                região.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="fase4" class="content-section">
+                <h2 class="text-2xl font-semibold text-green-700 mb-4">Fase 4: Divulgação Ativa e Interação (Chegar aos
+                    Clientes)</h2>
+                <p class="section-intro-text">Ter uma presença digital não é suficiente; é preciso divulgá-la ativamente
+                    e interagir com o seu público. Esta fase foca-se em como alcançar potenciais clientes e construir
+                    relacionamentos.</p>
+                <ul class="space-y-3">
+                    <li class="checklist-item"><strong>Publicidade Online Geo-segmentada (Anúncios Pagos):</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Considere anúncios no Facebook/Instagram e/ou Google Ads.
+                            </li>
+                            <li class="checklist-item-sub"><strong class="text-red-600">SEGMENTAÇÃO GEOGRÁFICA É
+                                    FUNDAMENTAL.</strong></li>
+                            <li class="checklist-item-sub">Segmente por interesses (ex: agricultura).</li>
+                            <li class="checklist-item-sub">Use linguagem direta e apelo à ação claro.</li>
+                            <li class="checklist-item-sub">Comece com orçamento pequeno para testar.</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Interação em Grupos Locais Online (Com Moderação e
+                            Relevância):</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Participe em grupos de Facebook locais.</li>
+                            <li class="checklist-item-sub"><strong class="text-red-600">NÃO FAÇA SPAM.</strong>
+                                Contribua de forma útil.</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Incentivar o "Passa-Palavra" Digital:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Peça a clientes satisfeitos para partilharem/recomendarem
+                                online.</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Integração Offline-Online:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Inclua canais digitais em materiais offline (cartões,
+                                folhetos).</li>
+                            <li class="checklist-item-sub">Divulgue canais digitais em eventos locais.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="fase5" class="content-section">
+                <h2 class="text-2xl font-semibold text-green-700 mb-4">Fase 5: Manutenção, Análise e Melhoria Contínua
+                </h2>
+                <p class="section-intro-text">A presença digital é um esforço contínuo. Esta fase trata de manter tudo a
+                    funcionar, analisar o que está a dar resultados e fazer ajustes para melhorar constantemente.</p>
+                <ul class="space-y-3">
+                    <li class="checklist-item"><strong>Monitorizar e Responder Prontamente:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Verifique regularmente todas as plataformas.</li>
+                            <li class="checklist-item-sub">Responda a TODAS as interações rapidamente.</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Analisar Resultados Básicos:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Observe de onde vêm os contactos.</li>
+                            <li class="checklist-item-sub">Veja quais publicações tiveram mais alcance/interação.</li>
+                            <li class="checklist-item-sub">Pergunte aos novos clientes: "Como é que nos encontrou?"
+                                (<span class="font-semibold text-emerald-600">Métrica valiosa!</span>)</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Pedir Feedback e Adaptar:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Esteja aberto a feedback dos clientes.</li>
+                            <li class="checklist-item-sub">Ajuste a estratégia com base no que funciona melhor.</li>
+                        </ul>
+                    </li>
+                    <li class="checklist-item"><strong>Manter as Informações Atualizadas:</strong>
+                        <ul class="ml-6 mt-1 space-y-1 text-sm text-stone-700">
+                            <li class="checklist-item-sub">Garanta que todas as informações de contacto, horários e
+                                serviços estão sempre corretos.</li>
+                        </ul>
+                        <div class="highlight-note mt-6">
+                            <p class="font-bold text-lg text-green-700">Conclusão do Checklist:</p>
+                            <p>Ao seguir este checklist de forma consistente e adaptada à realidade da sua região, a sua
+                                empresa estará bem posicionada para construir uma presença digital eficaz, gerar
+                                confiança e, consequentemente, mais negócios. Lembre-se que, no interior, a reputação e
+                                o relacionamento pessoal continuam a ser muito importantes, e o digital deve
+                                complementar e reforçar isso.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="text-center mt-10 py-4 border-t border-stone-300">
+            <p class="text-sm text-stone-500">&copy; <span id="currentYear"></span> Checklist Interativo. Adaptado para
+                empresas de compra de florestas.</p>
+        </footer>
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.dataset.tab;
+
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.tab === targetTab) {
+                        btn.classList.add('active');
+                    }
+                });
+
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === targetTab) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
